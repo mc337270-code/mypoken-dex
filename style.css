@@ -1,476 +1,462 @@
 /* Reset básico */
-
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  }
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 :root {
---shell: #2b2b3d;
---shell-dark: #201f2c;
---screen-bg: #9eb08a;
---screen-dark: #7f9370;
---screen-text: #2f3b23;
---amber: #e8a33d;
---red: #d64545;
---card-bg: #f5f3ec;
+    --shell: #243447;
+    --shell-dark: #18232f;
+
+    --screen-bg: #dce8d2;
+    --screen-dark: #b8cba9;
+    --screen-text: #263b2a;
+
+    --red: #e63946;
+    --red-dark: #b92d38;
+
+    --blue: #4f91b8;
+    --blue-dark: #31647f;
+
+    --card-bg: #fffaf0;
+    --card-border: #d8d0bf;
+
+    --text-light: #f4f1e8;
+    --text-muted: #aeb8c2;
 }
 
+/* Página */
 body {
-font-family: 'Courier New', monospace;
-background: radial-gradient(
-circle at 50% 20%,
-#3a3a52 0%,
-#17171f 70%
-);
+    font-family: 'Courier New', monospace;
 
-```
-min-height: 100vh;
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            #40546a 0%,
+            #1b2530 65%,
+            #111820 100%
+        );
 
-display: flex;
-justify-content: center;
-align-items: center;
+    min-height: 100vh;
 
-padding: 24px;
-```
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+    padding: 24px;
 }
 
-/* Carcaça do dispositivo */
+/* Carcaça da Pokédex */
 .device {
-width: 100%;
-max-width: 360px;
+    width: 100%;
+    max-width: 360px;
 
-```
-background: var(--shell);
+    background: var(--shell);
 
-border-radius: 22px;
+    border-radius: 24px;
 
-padding: 18px 18px 26px;
+    padding: 20px 20px 26px;
 
-box-shadow:
-    0 20px 40px rgba(0, 0, 0, 0.5),
-    inset 0 0 0 2px var(--shell-dark);
-```
+    border: 2px solid #17212b;
 
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.55),
+        inset 0 0 0 2px rgba(255, 255, 255, 0.04);
 }
 
 /* Parte superior */
 .device-top {
-display: flex;
-align-items: center;
+    display: flex;
+    align-items: center;
 
-```
-gap: 8px;
+    gap: 8px;
 
-margin-bottom: 10px;
-```
-
+    margin-bottom: 12px;
 }
 
+/* Lente */
 .lens {
-width: 26px;
-height: 26px;
+    width: 30px;
+    height: 30px;
 
-```
-border-radius: 50%;
+    border-radius: 50%;
 
-background: radial-gradient(
-    circle at 35% 30%,
-    #7fd4e8,
-    #1d6f85 70%
-);
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            #b7f1ff,
+            #4f91b8 45%,
+            #214c63 75%
+        );
 
-border: 3px solid var(--shell-dark);
+    border: 3px solid var(--shell-dark);
 
-margin-right: 4px;
-```
+    box-shadow:
+        0 0 10px rgba(79, 145, 184, 0.4);
 
+    margin-right: 4px;
 }
 
+/* LEDs */
 .led {
-width: 8px;
-height: 8px;
+    width: 9px;
+    height: 9px;
 
-```
-border-radius: 50%;
+    border-radius: 50%;
 
-display: inline-block;
-```
-
+    display: inline-block;
 }
 
 .led-red {
-background: var(--red);
+    background: #e63946;
 }
 
 .led-yellow {
-background: var(--amber);
+    background: #f2c14e;
 }
 
 .led-green {
-background: #6fae5c;
+    background: #65b96b;
 }
 
-/* Nome da Pokédex */
+/* Título */
 .device-label {
-text-align: left;
+    text-align: left;
 
-```
-margin-bottom: 14px;
+    margin-bottom: 16px;
 
-padding-left: 2px;
-```
-
+    padding-left: 2px;
 }
 
 .device-label h1 {
-font-family: 'Courier New', monospace;
+    font-family: 'Courier New', monospace;
 
-```
-font-size: 18px;
+    font-size: 17px;
 
-font-weight: bold;
+    font-weight: bold;
 
-color: #f2f2f5;
+    color: var(--text-light);
 
-letter-spacing: 1px;
+    letter-spacing: 1px;
 
-line-height: 1.5;
-```
-
+    line-height: 1.5;
 }
 
 .device-label p {
-font-size: 10px;
+    font-size: 10px;
 
-```
-color: #8f8fa8;
+    color: var(--text-muted);
 
-margin-top: 4px;
+    margin-top: 4px;
 
-letter-spacing: 1px;
-```
-
+    letter-spacing: 1px;
 }
 
-/* Visor estilo LCD */
+/* Tela externa */
 .screen {
-background: var(--shell-dark);
+    background: var(--shell-dark);
 
-```
-border-radius: 12px;
+    border-radius: 12px;
 
-padding: 8px;
+    padding: 8px;
 
-box-shadow:
-    inset 0 2px 6px rgba(0, 0, 0, 0.6);
-```
-
+    box-shadow:
+        inset 0 2px 7px rgba(0, 0, 0, 0.7);
 }
 
+/* Tela LCD */
 .screen-inner {
-background: var(--screen-bg);
+    background: var(--screen-bg);
 
-```
-border-radius: 6px;
+    border-radius: 6px;
 
-min-height: 300px;
+    min-height: 300px;
 
-padding: 14px;
+    padding: 14px;
 
-position: relative;
+    position: relative;
 
-background-image: repeating-linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 0.05) 0px,
-    rgba(0, 0, 0, 0.05) 1px,
-    transparent 1px,
-    transparent 3px
-);
-```
-
+    background-image:
+        repeating-linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.035) 0px,
+            rgba(0, 0, 0, 0.035) 1px,
+            transparent 1px,
+            transparent 4px
+        );
 }
 
-/* Área de busca */
+/* Campo de busca */
 .search-row {
-display: flex;
+    display: flex;
 
-```
-align-items: center;
+    align-items: center;
 
-gap: 6px;
+    gap: 6px;
 
-background: var(--screen-dark);
+    background: var(--screen-dark);
 
-border-radius: 4px;
+    border-radius: 6px;
 
-padding: 8px 10px;
+    padding: 8px 10px;
 
-margin-bottom: 10px;
-```
+    margin-bottom: 10px;
 
+    border: 1px solid rgba(38, 59, 42, 0.15);
 }
 
 .prompt {
-color: var(--screen-text);
+    color: var(--screen-text);
 
-```
-font-weight: 600;
-```
+    font-weight: bold;
 
+    font-size: 16px;
 }
 
+/* Campo de texto */
 .search-row input {
-flex: 1;
+    flex: 1;
 
-```
-background: transparent;
+    width: 100%;
 
-border: none;
+    background: transparent;
 
-outline: none;
+    border: none;
 
-font-family: 'Courier New', monospace;
+    outline: none;
 
-font-size: 14px;
+    font-family: 'Courier New', monospace;
 
-color: var(--screen-text);
-```
+    font-size: 14px;
 
+    color: var(--screen-text);
+
+    /* Permite digitar letras e números */
+    -webkit-appearance: none;
+    appearance: none;
 }
 
 .search-row input::placeholder {
-color: rgba(47, 59, 35, 0.55);
+    color: rgba(38, 59, 42, 0.55);
 }
 
 /* Mensagem */
 .status {
-color: var(--screen-text);
+    color: var(--screen-text);
 
-```
-font-size: 12px;
+    font-size: 12px;
 
-padding: 8px 2px;
-```
+    line-height: 1.5;
 
+    padding: 8px 2px;
 }
 
-/* Ocultar elemento */
+/* Ocultar */
 .oculto {
-display: none !important;
+    display: none !important;
 }
 
-/* Resultado */
+/* Cartão do Pokémon */
 .result {
-background: var(--card-bg);
+    background: var(--card-bg);
 
-```
-border-radius: 6px;
+    border: 1px solid var(--card-border);
 
-padding: 14px;
+    border-radius: 8px;
 
-animation: flicker 0.3s ease-in-out;
-```
+    padding: 14px;
 
+    animation: flicker 0.3s ease-in-out;
 }
 
+/* Número e tipo */
 .result-top {
-display: flex;
+    display: flex;
 
-```
-justify-content: space-between;
+    justify-content: space-between;
 
-align-items: center;
+    align-items: center;
 
-margin-bottom: 8px;
-```
-
+    margin-bottom: 8px;
 }
 
 .badge {
-font-size: 11px;
+    font-size: 11px;
 
-```
-font-weight: 600;
+    font-weight: bold;
 
-color: var(--shell-dark);
+    color: var(--shell-dark);
 
-background: #e2e0d4;
+    background: #e8e1d2;
 
-padding: 3px 8px;
+    padding: 4px 8px;
 
-border-radius: 4px;
-```
-
+    border-radius: 4px;
 }
 
 .type-tag {
-font-size: 11px;
+    font-size: 11px;
 
-```
-font-weight: 600;
+    font-weight: bold;
 
-color: #fff;
+    color: white;
 
-background: var(--red);
+    background: var(--red);
 
-padding: 3px 8px;
+    padding: 4px 8px;
 
-border-radius: 4px;
-```
+    border-radius: 4px;
 
+    text-transform: capitalize;
 }
 
+/* Área da imagem */
 .sprite-frame {
-background: repeating-conic-gradient(
-#e2e0d4 0% 25%,
-#f5f3ec 0% 50%
-) 50% / 14px 14px;
+    background:
+        repeating-conic-gradient(
+            #e6dfd1 0% 25%,
+            #fffaf0 0% 50%
+        ) 50% / 14px 14px;
 
-```
-border-radius: 6px;
+    border-radius: 7px;
 
-display: flex;
+    display: flex;
 
-justify-content: center;
+    justify-content: center;
 
-align-items: center;
+    align-items: center;
 
-padding: 10px;
+    padding: 10px;
 
-margin-bottom: 10px;
-```
+    margin-bottom: 10px;
 
+    border: 1px solid var(--card-border);
 }
 
+/* Imagem */
 .sprite-frame img {
-width: 130px;
-height: 130px;
+    width: 130px;
+    height: 130px;
 
-```
-image-rendering: pixelated;
-```
+    object-fit: contain;
 
+    image-rendering: pixelated;
 }
 
+/* Nome */
 .result h2 {
-font-size: 18px;
+    font-size: 18px;
 
-```
-color: var(--shell-dark);
+    color: var(--shell-dark);
 
-text-transform: capitalize;
+    text-transform: capitalize;
 
-margin-bottom: 6px;
-```
-
+    margin-bottom: 6px;
 }
 
+/* Informações */
 .stat-line {
-font-size: 13px;
+    font-size: 13px;
 
-```
-color: #57606f;
-```
+    color: #57606f;
+}
 
+.stat-line strong {
+    color: var(--shell-dark);
 }
 
 /* Botão */
 .scan-btn {
-width: 100%;
+    width: 100%;
 
-```
-margin-top: 18px;
+    margin-top: 18px;
 
-background: var(--red);
+    background: var(--red);
 
-color: #fff;
+    color: white;
 
-border: none;
+    border: none;
 
-border-radius: 30px;
+    border-radius: 30px;
 
-padding: 14px;
+    padding: 14px;
 
-font-family: 'Courier New', monospace;
+    font-family: 'Courier New', monospace;
 
-font-size: 12px;
+    font-size: 12px;
 
-font-weight: bold;
+    font-weight: bold;
 
-letter-spacing: 1px;
+    letter-spacing: 1px;
 
-cursor: pointer;
+    cursor: pointer;
 
-display: flex;
+    display: flex;
 
-justify-content: center;
+    justify-content: center;
 
-align-items: center;
+    align-items: center;
 
-gap: 10px;
+    gap: 10px;
 
-box-shadow: 0 4px 0 #a33333;
+    box-shadow:
+        0 4px 0 var(--red-dark);
 
-transition:
-    transform 0.1s ease,
-    box-shadow 0.1s ease;
-```
-
+    transition:
+        transform 0.1s ease,
+        box-shadow 0.1s ease,
+        background 0.2s ease;
 }
 
+/* Efeito ao passar o mouse */
+.scan-btn:hover {
+    background: #ef4b57;
+}
+
+/* Efeito ao clicar */
 .scan-btn:active {
-transform: translateY(3px);
+    transform: translateY(3px);
 
-```
-box-shadow: 0 1px 0 #a33333;
-```
-
+    box-shadow:
+        0 1px 0 var(--red-dark);
 }
 
+/* Bolinha do botão */
 .scan-dot {
-width: 8px;
-height: 8px;
+    width: 8px;
+    height: 8px;
 
-```
-border-radius: 50%;
+    border-radius: 50%;
 
-background: #fff;
+    background: white;
 
-box-shadow: 0 0 6px #fff;
-```
-
+    box-shadow:
+        0 0 6px white;
 }
 
-/* Animação */
+/* Animação do resultado */
 @keyframes flicker {
-from {
-opacity: 0;
-transform: translateY(4px);
-}
 
-```
-to {
-    opacity: 1;
-    transform: translateY(0);
-}
-```
+    from {
+        opacity: 0;
+        transform: translateY(4px);
+    }
 
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Responsividade */
 @media (max-width: 400px) {
 
-```
-body {
-    padding: 12px;
-}
+    body {
+        padding: 12px;
+    }
 
-.device {
-    max-width: 100%;
-}
-```
-
+    .device {
+        max-width: 100%;
+    }
 }
