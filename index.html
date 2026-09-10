@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>Pokédex Web</title>
+
+<link rel="stylesheet" href="style.css">
+```
+
+</head>
+
+<body>
+
+```
+<main class="device">
+
+    <div class="device-top">
+        <div class="lens"></div>
+        <span class="led led-red"></span>
+        <span class="led led-yellow"></span>
+        <span class="led led-green"></span>
+    </div>
+
+    <div class="device-label">
+        <h1>POKÉDEX DIGITAL</h1>
+        <p>CONSULTA DE POKÉMON</p>
+    </div>
+
+    <section class="screen">
+
+        <div class="screen-inner">
+
+            <div class="search-row">
+                <span class="prompt">&gt;</span>
+
+                <input
+                    type="text"
+                    id="inputPokemon"
+                    placeholder="Digite nome ou número"
+                >
+            </div>
+
+            <p id="mensagemErro" class="status">
+                Digite um Pokémon para começar.
+            </p>
+
+            <section id="cardPokemon" class="result oculto">
+
+                <div class="result-top">
+                    <span id="numeroPokemon" class="badge">#000</span>
+                    <span id="tipoPokemon" class="type-tag">---</span>
+                </div>
+
+                <div class="sprite-frame">
+                    <img
+                        id="imagemPokemon"
+                        src=""
+                        alt="Imagem do Pokémon"
+                    >
+                </div>
+
+                <h2 id="nomePokemon">Nome</h2>
+
+                <p class="stat-line">
+                    Peso:
+                    <strong id="pesoPokemon">---</strong>
+                    kg
+                </p>
+
+            </section>
+
+        </div>
+
+    </section>
+
+    <button class="scan-btn" onclick="buscarPokemon()">
+        <span class="scan-dot"></span>
+        BUSCAR POKÉMON
+    </button>
+
+</main>
+
+<script src="script.js"></script>
+```
+
+</body>
+
+</html>
+
+
